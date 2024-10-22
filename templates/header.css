@@ -1,31 +1,79 @@
-/*Navbar*/
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1; /* Nilai z-index rendah untuk memastikan elemen lain bisa menimpa */
+    z-index: 1;
     background-image: linear-gradient(
         90deg,
         rgba(65, 98, 189, 1) 0%,
         rgba(0, 19, 71, 1) 100%
     );
+    font-weight: bold;
 }
 
+/* Logo with margin */
+.navbar-brand {
+    margin-left: 50px;
+}
+
+/* Navbar links */
 .navbar a {
     color: #ffffff;
+    margin: 0px 20px;
+    position: relative;
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease-in-out;
 }
 
+/* Hover effect for menu links */
 .navbar a:hover {
     color: #91ceff;
 }
 
-.dropdown-content {
-    display: none;
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.5s ease-in-out;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+/* Show white line under menu item on hover */
+.navbar a:hover::after {
+    width: 100%; /* Make the line as wide as the text */
 }
 
-/*Navbar*/
+/* Navbar brand image */
+.navbar-brand img {
+    width: 100px; /* Default logo size */
+}
+
+.navbar-nav {
+    margin-right: 50px;
+}
+
+/* Responsive design for screen widths 768px and below */
+@media (max-width: 768px) {
+    .navbar-brand {
+        margin-left: 20px; /* Adjust logo margin for smaller screens */
+    }
+}
+
+/* Responsive design for screen widths 420px and below */
+@media (max-width: 420px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack menu items vertically */
+    }
+
+    .navbar-brand img {
+        width: 70px !important; /* Make logo smaller */
+    }
+}

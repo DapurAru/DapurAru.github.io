@@ -11,13 +11,43 @@
     );
 }
 
+.brandfot a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
 @media (max-width: 768px) {
-    /* Ubah tampilan footer untuk layar kecil */
     .footorlogo {
-        width: 120px; /* Ukuran logo untuk layar kecil */
+        width: 120px;
     }
 
     .social-icons {
-        display: none !important; /* Menyembunyikan elemen dengan prioritas tinggi */
+        display: none !important;
+    }
+}
+
+@media (max-width: 576px) {
+    h5 {
+        font-size: 18px; /* Mengatur ukuran font heading untuk layar kecil */
+    }
+
+    p,
+    a {
+        font-size: 14px; /* Mengatur ukuran font teks untuk layar kecil */
+    }
+}
+
+@media (max-width: 420px) {
+    h5 {
+        font-size: 16px; /* Ukuran lebih kecil untuk layar 420px */
+    }
+
+    p,
+    a {
+        font-size: 12px; /* Ukuran teks lebih kecil untuk layar 420px */
+    }
+
+    .footorlogo {
+        width: 100px; /* Ukuran logo lebih kecil */
     }
 }
