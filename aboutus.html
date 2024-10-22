@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Example</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="cssstyle/css.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- Header -->
+
+    <!-- About Us-->
+
+    <!-- about -->
+    <section id="about" class="about">
+      <div class="row">
+        <div
+          class="about-img"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          <img src="img/des2.jpg" alt="tentang-kami" />
+        </div>
+        <div
+          class="content"
+          data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="500"
+          data-aos-duration="3000"
+        >
+          <h3 style="color: aliceblue">lorem <span class="aa">lorem</span></h3>
+          <h4 class="pa">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae
+            distinctio dolore quidem praesentium impedit quaerat delectus
+            perferendis dolores, repudiandae, illum debitis labore perspiciatis
+            quos blanditiis fuga, aliquam temporibus neque quo.
+          </h4>
+          <h4 class="pa">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            sapiente ab magni qui perspiciatis tempore doloremque odit, atque,
+            illum esse molestias recusandae perferendis officiis, temporibus
+            ipsa necessitatibus dolor debitis! Excepturi?
+          </h4>
+          <h4 class="pa">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Consequatur, voluptatem voluptatum. Sapiente et ad ipsam tempora
+            repudiandae harum ipsa, facere, aut alias magni aliquam in, nemo
+            nostrum! Unde, ducimus eaque.
+          </h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us-->
+
+    <!-- More penjelasan-->
+    <div class="Penjelasan">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque sint
+        provident repellat explicabo quasi, perferendis alias, voluptatum magnam
+        perspiciatis repellendus nesciunt iure odit, id porro quaerat expedita
+        accusamus tempora praesentium qui omnis rerum quam culpa sit. Eaque odio
+        maiores id cupiditate quos fuga magnam a quam soluta, reprehenderit in
+        et accusamus sint molestiae enim est accusantium recusandae iure.
+        Adipisci officiis voluptate, aspernatur incidunt, ipsam, cupiditate
+        delectus alias voluptatibus voluptates qui architecto nemo porro dolore.
+        Harum minima in voluptas aperiam atque asperiores hic fugit ea nostrum!
+        Sunt provident similique, architecto mollitia eos praesentium odio rem!
+        Saepe officiis eos ab aliquam maiores!
+      </p>
+    </div>
+    <!-- More Penjelasan-->
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- Footer -->
+
+    <!-- Script -->
+
+    <script>
+      // Fetch dan masukkan konten header ke dalam #header
+      fetch("templates/header.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("header").innerHTML = data))
+        .catch((error) => console.error("Gagal memuat header:", error));
+
+      // Memuat footer menggunakan Fetch API
+      fetch("templates/footer.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("footer").innerHTML = data))
+        .catch((error) => console.error("Gagal memuat footer:", error));
+    </script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Navbar toggler for mobile view
+      document
+        .getElementById("navbar-toggler")
+        .addEventListener("click", function () {
+          const nav = document.querySelector(".lg\\:flex");
+          nav.classList.toggle("hidden");
+        });
+
+      // Dropdown toggle for Our Products
+      const dropdownButton = document.querySelector(".relative button");
+      const dropdownMenu = document.querySelector(".relative .absolute");
+
+      dropdownButton.addEventListener("click", () => {
+        dropdownMenu.classList.toggle("hidden");
+      });
+    </script>
+    <!-- Script -->
+  </body>
+</html>

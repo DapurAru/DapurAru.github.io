@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Navbar Example</title>
+
+        <link rel="stylesheet" href="cssstyle/css.css" />
+        <link rel="stylesheet" href="templates/header.css" />
+        <link rel="stylesheet" href="templates/footer.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <!-- Headerr -->
+        <div id="header"></div>
+        <!-- Header -->
+
+        <!-- slider -->
+        <div
+            id="carouselExampleCaptions"
+            class="carousel slide carousel-fade pb-5 relative w-full"
+            data-bs-ride="carousel"
+        >
+            <div class="carousel-indicators">
+                <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                ></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                ></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                ></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="backroundd">
+                        <img
+                            src="img/des2.jpg"
+                            class="d-block w-100 custom-carousel-height"
+                            alt="..."
+                        />
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>
+                                Some representative placeholder content for the
+                                first slide.
+                            </p>
+                        </div>
+                        <div
+                            class="overlay-content position-absolute start-0 top-50 translate-middle-y p-3 text-white"
+                        >
+                            <h4 class="display-6">Welcome to Our Site</h4>
+                            <p>Explore amazing features with us!</p>
+                            <a href="#features" class="btn btn-primary"
+                                >Learn More</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="backroundd">
+                        <img
+                            src="img/imgback2.jpg"
+                            class="d-block w-100 custom-carousel-height"
+                            alt="..."
+                        />
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>
+                                Some representative placeholder content for the
+                                second slide.
+                            </p>
+                        </div>
+                        <div
+                            class="overlay-content position-absolute start-0 top-50 translate-middle-y p-3 text-white"
+                        >
+                            <h4 class="display-6">
+                                Discover New Opportunities
+                            </h4>
+                            <p>Join us and grow your potential!</p>
+                            <a href="#opportunities" class="btn btn-primary"
+                                >Get Started</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="backroundd">
+                        <img
+                            src="img/des2.jpg"
+                            class="d-block w-100 custom-carousel-height"
+                            alt="..."
+                        />
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>
+                                Some representative placeholder content for the
+                                third slide.
+                            </p>
+                        </div>
+                        <div
+                            class="overlay-content position-absolute start-0 top-50 translate-middle-y p-3 text-white"
+                        >
+                            <h4 class="display-6">Stay Ahead with Us</h4>
+                            <p>Get the latest updates and trends!</p>
+                            <a href="#updates" class="btn btn-primary"
+                                >Subscribe Now</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev"
+            >
+                <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next"
+            >
+                <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- Slider -->
+
+        <!-- About Us Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- About Us Text (Left Column) -->
+                    <div class="col-md-6 mb-4 fade-in" id="about-text">
+                        <h3 class="text-primary fw-bold mb-3">
+                            ABOUT SAHABAT TANI
+                        </h3>
+                        <p class="mb-3">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nam maxime, excepturi perferendis velit
+                            sapiente ex quo ad autem laborum quasi nisi
+                            laboriosam ullam asperiores sit laudantium! Expedita
+                            illum reprehenderit enim.
+                        </p>
+                        <p class="mb-3">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Ratione unde tenetur architecto consectetur
+                            modi illo nesciunt explicabo nostrum! Itaque
+                            perspiciatis ducimus, ipsum impedit facilis vero!
+                            Debitis labore omnis quae accusamus.
+                        </p>
+                        <p class="mb-4">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. In, voluptatibus neque voluptate perferendis,
+                            incidunt dicta nostrum quia alias possimus
+                            blanditiis odio, culpa magnam velit eaque. Eaque
+                            tenetur iusto nulla perferendis.
+                        </p>
+                        <a href="aboutus.html" class="btn btn-primary btn-lg"
+                            >ABOUT US</a
+                        >
+                    </div>
+
+                    <!-- Image (Right Column) -->
+                    <div class="col-md-6 fade-in" id="about-img">
+                        <img
+                            src="img/imgback.jpg"
+                            class="img-fluid rounded"
+                            alt="About Us Image"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of About Us -->
+
+        <!-- Moto -->
+        <div class="container mt-5 text-center relative motohome">
+            <h2 class="fw-bold text-gray-800 fade-in-left" id="moto-header">
+                WE ARE SUPPLIER AND SPECIALIST EXPORTER OF COCONUT PRODUCTS
+            </h2>
+            <p class="text-gray-600 mt-3 fade-in-left" id="moto-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
+                et. Best Coconut Supplier From Indonesia as generations of
+                experience in developing coconut based products. Creating a
+                sustainable synergy that integrates business with the
+                environment, we value social stability within our communities.
+                Emboldened with the spirit of innovation, we dedicate research
+                into the creation of products that are essential to our partners
+                and consumers.
+            </p>
+
+            <div class="row text-center mt-5">
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6 mb-4 fade-in-left" id="card1">
+                    <div class="card border-0 shadow-sm p-4">
+                        <div class="card-bodyy">
+                            <div class="mb-3">
+                                <span class="inline-block text-4xl">👥</span>
+                            </div>
+                            <h5 class="fw-bold">WE ACT RESPONSIBLY</h5>
+                            <p class="text-gray-600">
+                                We are actively involved in improving the
+                                communities in which we operate through our
+                                extensive
+                                <span class="fw-bold"
+                                    >Corporate Social Responsibility</span
+                                >
+                                programs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6 mb-4 fade-in-left" id="card2">
+                    <div class="card border-0 shadow-sm p-4">
+                        <div class="card-bodyy">
+                            <div class="mb-3">
+                                <span class="inline-block text-4xl">🌳</span>
+                            </div>
+                            <h5 class="fw-bold">WE GROW TOGETHER</h5>
+                            <p class="text-gray-600">
+                                We believe in creating win-win partnerships so
+                                we closely work with our suppliers, buyers, and
+                                authorities to ensure mutually beneficial growth
+                                and success for everyone.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6 mb-4 fade-in-left" id="card3">
+                    <div class="card border-0 shadow-sm p-4">
+                        <div class="card-bodyy">
+                            <div class="mb-3">
+                                <span class="inline-block text-4xl">🤝</span>
+                            </div>
+                            <h5 class="fw-bold">WE HONOR OUR COMMITMENTS</h5>
+                            <p class="text-gray-600">
+                                We pay these fees so you don't have to! The
+                                total billed at checkout is the final amount you
+                                pay, inclusive of VAT, with no additional
+                                charges at the time of delivery!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Moto -->
+
+        <!-- Our Produk -->
+        <div class="container mt-5 produk">
+            <h2
+                style="margin-bottom: 40px"
+                class="fw-bold text-gray-800 text-center"
+            >
+                DAFTAR PRODUK
+            </h2>
+            <div class="row">
+                <!-- Minyak kelapa -->
+                <div class="col-md-6 col-sm-6 mb-4 produk semua">
+                    <div
+                        class="card shadow-lg border border-gray-300 rounded-lg bg-white product-card"
+                    >
+                        <div class="img-container position-relative">
+                            <img
+                                src="img/produk1.jpg"
+                                alt="Produk 1"
+                                class="card-img-top rounded-lg custom-img"
+                            />
+                            <div class="hover-text">
+                                <p class="card-text mt-2">
+                                    minyak nabati yang diekstrak dari daging
+                                    buah kelapa. perpanjang kalimat diatas
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title fw-bold">Minyak Kelapa</h3>
+                            <button
+                                class="btn btn-primary mt-3"
+                                onclick="openPopup('Produk 1', 'img/des2.jpg', 'Minyak nabati yang diekstrak dari daging buah kelapa merupakan salah satu jenis minyak alami yang banyak digunakan dalam berbagai bidang, seperti industri makanan, kecantikan, dan kesehatan. Minyak ini dihasilkan melalui proses pemerasan atau ekstraksi daging kelapa yang sudah matang, kemudian diolah lebih lanjut agar dapat dimanfaatkan sebagai bahan dasar untuk produk-produk seperti minyak goreng, kosmetik, dan suplemen kesehatan. Minyak kelapa juga dikenal memiliki kandungan nutrisi yang baik, seperti asam laurat dan antioksidan, yang dapat memberikan manfaat bagi kesehatan kulit, rambut, dan sistem kekebalan tubuh.')"
+                            >
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soybean Meal -->
+                <div class="col-md-6 col-sm-6 mb-4 cardseluruh">
+                    <div
+                        class="card shadow-lg border border-gray-300 rounded-lg bg-white product-card"
+                    >
+                        <div class="img-container position-relative">
+                            <img
+                                src="img/produk2.jpg"
+                                alt="Produk 2"
+                                class="card-img-top rounded-lg custom-img"
+                            />
+                            <div class="hover-text">
+                                <p class="card-text mt-2">
+                                    SBM atau Soybean Meal adalah bahan pakan
+                                    yang berasal dari produk sampingan
+                                    pengolahan biji kedelai menjadi minyak
+                                    kedelai
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title fw-bold">Soybean Meal</h3>
+                            <button
+                                class="btn btn-primary mt-3"
+                                onclick="openPopup('Produk 2', 'img/des.jpg', 'SBM, atau Soybean Meal, adalah bahan pakan yang dihasilkan sebagai produk sampingan dari proses pengolahan biji kedelai menjadi minyak kedelai. Setelah minyak diekstrak dari biji kedelai, sisa ampas yang kaya akan protein diolah lebih lanjut menjadi SBM, yang merupakan salah satu sumber protein nabati utama dalam industri pakan ternak. SBM memiliki kandungan nutrisi yang sangat baik, seperti asam amino esensial dan protein yang mudah dicerna, sehingga sangat cocok untuk meningkatkan pertumbuhan dan kesehatan hewan ternak seperti ayam, sapi, babi, dan ikan. Selain itu, SBM juga sering digunakan dalam formulasi pakan komersial karena ketersediaannya yang melimpah dan harganya yang relatif terjangkau dibandingkan sumber protein lainnya, seperti tepung ikan atau tepung daging. Penggunaannya membantu memenuhi kebutuhan protein hewan ternak dengan cara yang efisien dan berkelanjutan, mendukung pertumbuhan yang optimal dan produksi ternak yang berkualitas tinggi.')"
+                            >
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pop-Up -->
+        <div id="product-popup" class="popup hidden">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <img
+                    id="popup-image"
+                    src=""
+                    alt="Gambar Produk"
+                    class="popup-image img-fluid"
+                />
+                <h3 id="popup-title" class="popup-title fw-bold mt-3"></h3>
+                <p id="popup-description" class="popup-description"></p>
+                <a
+                    id="whatsapp-button"
+                    class="btn btn-success mt-3"
+                    target="_blank"
+                    >Chat di WhatsApp</a
+                >
+            </div>
+        </div>
+        <!-- Pop-Up -->
+        <!-- Our Produk -->
+
+        <div id="product-popup" class="popup hidden">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <img
+                    id="popup-image"
+                    src=""
+                    alt="Gambar Produk"
+                    class="popup-image img-fluid"
+                />
+                <h3 id="popup-title" class="popup-title fw-bold mt-3"></h3>
+                <p id="popup-description" class="popup-description"></p>
+                <a
+                    id="whatsapp-button"
+                    class="btn btn-success mt-3"
+                    target="_blank"
+                    >Chat di WhatsApp</a
+                >
+            </div>
+        </div>
+        <!-- Pop-Up -->
+
+        <!--Modal aktifin javascripte-->
+        <button
+            type="button"
+            class="btn btn-primary d-none btnModal"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+        >
+            Launch demo modal
+        </button>
+        <!--Modal aktifin javascripte-->
+
+        <!-- Mitra -->
+        <div class="container text-center relative mitrahome">
+            <h2 class="fw-bold text-gray-800 text-center">Lorem</h2>
+
+            <div class="container">
+                <div
+                    id="carouselExampleControls"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                >
+                    <div class="carousel-inner" align="center">
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div
+                                    class="col-6 col-sm-3 mb-3"
+                                    data-aos="zoom-in-right"
+                                    data-aos-duration="1500"
+                                >
+                                    <img
+                                        src="img/logo.jpg"
+                                        alt=""
+                                        class="figure img-fluid small-logo"
+                                    />
+                                </div>
+                                <div
+                                    class="col-6 col-sm-3 mb-3"
+                                    data-aos="zoom-in-right"
+                                    data-aos-duration="1500"
+                                >
+                                    <img
+                                        src="img/logo.jpg"
+                                        alt=""
+                                        class="figure img-fluid small-logo"
+                                    />
+                                </div>
+                                <div
+                                    class="col-6 col-sm-3 mb-3"
+                                    data-aos="zoom-in-right"
+                                    data-aos-duration="1500"
+                                >
+                                    <img
+                                        src="img/logo.jpg"
+                                        alt=""
+                                        class="figure img-fluid small-logo"
+                                    />
+                                </div>
+                                <div
+                                    class="col-6 col-sm-3 mb-3"
+                                    data-aos="zoom-in-right"
+                                    data-aos-duration="1500"
+                                >
+                                    <img
+                                        src="img/logo.jpg"
+                                        alt=""
+                                        class="figure img-fluid small-logo"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div
+                                    class="col-6 col-sm-3 mb-3"
+                                    data-aos="zoom-in-right"
+                                    data-aos-duration="1500"
+                                >
+                                    <img
+                                        src="img/logo.jpg"
+                                        alt=""
+                                        class="figure img-fluid small-logo"
+                                    />
+                                </div>
+                                <div
+                                    class="col-6 col-sm-3 mb-3"
+                                    data-aos="zoom-in-right"
+                                    data-aos-duration="1500"
+                                >
+                                    <img
+                                        src="img/logo.jpg"
+                                        alt=""
+                                        class="figure img-fluid small-logo"
+                                    />
+                                </div>
+                                <div
+                                    class="col-6 col-sm-3 mb-3"
+                                    data-aos="zoom-in-right"
+                                    data-aos-duration="1500"
+                                >
+                                    <img
+                                        src="img/logo.jpg"
+                                        alt=""
+                                        class="figure img-fluid small-logo"
+                                    />
+                                </div>
+                                <div
+                                    class="col-6 col-sm-3 mb-3"
+                                    data-aos="zoom-in-right"
+                                    data-aos-duration="1500"
+                                >
+                                    <img
+                                        src="img/logo.jpg"
+                                        alt=""
+                                        class="figure img-fluid small-logo"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttonmitra">
+                        <button
+                            class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev"
+                        >
+                            <span
+                                class="carousel-control-prev-icon"
+                                aria-hidden="true"
+                            ></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                            class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#carouselExampleControls"
+                            data-bs-slide="next"
+                        >
+                            <span
+                                class="carousel-control-next-icon"
+                                aria-hidden="true"
+                            ></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mitra -->
+
+        <!-- Footer -->
+        <div id="footer"></div>
+        <!-- Footer -->
+
+        <!-- Script -->
+        <script>
+            // Fetch dan masukkan konten header ke dalam #header
+            fetch('templates/header.html')
+                .then((response) => response.text())
+                .then(
+                    (data) =>
+                        (document.getElementById('header').innerHTML = data)
+                )
+                .catch((error) => console.error('Gagal memuat header:', error));
+
+            // Memuat footer menggunakan Fetch API
+            fetch('templates/footer.html')
+                .then((response) => response.text())
+                .then(
+                    (data) =>
+                        (document.getElementById('footer').innerHTML = data)
+                )
+                .catch((error) => console.error('Gagal memuat footer:', error));
+        </script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="jsscript/efekscroll.js"></script>
+        <script src="jsscript/popup.js"></script>
+        <!-- Script -->
+    </body>
+</html>

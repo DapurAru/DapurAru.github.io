@@ -1,0 +1,23 @@
+.footorlogo {
+    width: 150px;
+    height: auto;
+}
+
+.bg-primary {
+    background-image: linear-gradient(
+        90deg,
+        rgba(65, 98, 189, 1) 0%,
+        rgba(0, 19, 71, 1) 100%
+    );
+}
+
+@media (max-width: 768px) {
+    /* Ubah tampilan footer untuk layar kecil */
+    .footorlogo {
+        width: 120px; /* Ukuran logo untuk layar kecil */
+    }
+
+    .social-icons {
+        display: none !important; /* Menyembunyikan elemen dengan prioritas tinggi */
+    }
+}
