@@ -77,7 +77,7 @@ body {
 }
 
 /* Responsif untuk layar kecil */
-@media (max-width: 400px) {
+@media (max-width: 576px) {
     .overlay-content {
         margin-left: 10px; /* Mengurangi margin untuk layar kecil */
         margin-right: 10px; /* Menambahkan margin kanan untuk keseimbangan */
@@ -85,22 +85,31 @@ body {
     }
 
     .overlay-content h4 {
-        font-size: 1.5rem; /* Ukuran font untuk judul overlay */
+        font-size: 1rem; /* Ukuran font untuk judul overlay */
     }
 
     .overlay-content p {
-        font-size: 0.6rem; /* Ukuran font untuk teks overlay */
+        font-size: 0.5rem; /* Ukuran font untuk teks overlay */
     }
 
     .overlay-content .btn {
-        font-size: 0.75rem; /* Ukuran font untuk tombol */
-        padding: 0.5rem 1rem; /* Mengurangi padding tombol */
+        font-size: 0.7rem !important; /* Ukuran font untuk tombol */
+        width: 100px;
+        height: 30px;
+    }
+
+    .carousel-control-prev {
+        width: 20px !important;
+    }
+
+    .carousel-control-next {
+        width: 20px !important;
     }
 }
 
 @media (max-width: 768px) {
     .custom-carousel-height {
-        height: 400px; /* Atur tinggi gambar untuk layar kecil */
+        height: 600px; /* Atur tinggi gambar untuk layar kecil */
         object-fit: cover; /* Memastikan gambar tetap terpotong dengan baik */
     }
 
@@ -121,9 +130,9 @@ body {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 576px) {
     .custom-carousel-height {
-        height: 300px; /* Atur tinggi gambar untuk layar kecil */
+        height: 500px; /* Atur tinggi gambar untuk layar kecil */
         object-fit: cover; /* Memastikan gambar tetap terpotong dengan baik */
     }
 
@@ -188,6 +197,18 @@ body {
 .about-section .fade-in.show {
     opacity: 1;
     transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    .aboutfoto img {
+    }
+}
+
+@media (max-width: 576px) {
+    .aboutfoto img {
+        width: 100%;
+        height: 400px;
+    }
 }
 /*About Home*/
 
@@ -395,6 +416,26 @@ h3 {
     border-radius: 10px;
 }
 
+/* Untuk layar kecil (tablet atau mobile) */
+@media (max-width: 768px) {
+    .popup-image {
+        height: 450px !important;
+    }
+    .popup-description {
+        font-size: 14px !important;
+    }
+}
+
+/* Untuk layar yang sangat kecil (mobile) */
+@media (max-width: 576px) {
+    .popup-image {
+        height: 350px !important;
+    }
+    .popup-description {
+        font-size: 12px !important;
+    }
+}
+
 .popup-title {
     font-size: 1.5rem;
     font-weight: bold;
@@ -481,7 +522,7 @@ h3 {
 }
 
 /* Responsivitas untuk layar kecil */
-@media (max-width: 400px) {
+@media (max-width: 576px) {
     .small-logo {
         max-width: 60%; /* Atur lebar maksimum untuk layar kecil */
     }
@@ -551,7 +592,7 @@ h3 {
 }
 
 /* Media query untuk layar 400px ke bawah */
-@media (max-width: 400px) {
+@media (max-width: 576px) {
     .image-container img {
         height: 400px; /* Ubah tinggi gambar */
     }
@@ -561,17 +602,6 @@ h3 {
     }
 }
 
-/* CSS for Fade In Animation */
-.fade-in-up {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
 .card {
     display: flex;
     flex-direction: column;
