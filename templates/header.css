@@ -64,7 +64,7 @@
 }
 
 /* Responsive design for screen widths 420px and below */
-@media (max-width: 420px) {
+@media (max-width: 576px) {
     .navbar {
         padding: 10px;
     }
@@ -75,5 +75,25 @@
 
     .navbar-brand img {
         width: 70px !important; /* Make logo smaller */
+    }
+}
+
+/* Responsive design for screen widths 576px and below */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-brand img {
+        width: 70px !important; /* Make logo smaller */
+        transform: translateX(-60px);
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack menu items vertically */
+    }
+
+    .navbar-toggler-icon {
+        width: 20px !important;
     }
 }

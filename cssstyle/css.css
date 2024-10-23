@@ -199,11 +199,6 @@ body {
     transform: translateX(0);
 }
 
-@media (max-width: 768px) {
-    .aboutfoto img {
-    }
-}
-
 @media (max-width: 576px) {
     .aboutfoto img {
         width: 100%;
