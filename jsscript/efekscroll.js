@@ -39,20 +39,11 @@ document.addEventListener('scroll', function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const elements = document.querySelectorAll(
-        '#contact-title, #contact-card-1, #contact-card-2, #maps-info, #maps-iframe'
-    );
-
-    elements.forEach((element) => {
-        element.classList.add('fade-in-up');
-    });
-
-    // Delay to allow the initial fade-out effect, then add the fade-in class
-    setTimeout(() => {
-        elements.forEach((element) => {
-            element.classList.add('fade-in');
-            element.classList.remove('fade-in-up'); // Remove the fade-out effect
-        });
-    }, 100); // Adjust delay as needed
+window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('navbar-scrolled');
+    } else {
+        navbar.classList.remove('navbar-scrolled');
+    }
 });

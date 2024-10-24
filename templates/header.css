@@ -3,30 +3,49 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 1000;
     background-image: linear-gradient(
         90deg,
         rgba(65, 98, 189, 1) 0%,
         rgba(0, 19, 71, 1) 100%
-    );
+    ); /* Background gradient default */
     font-weight: bold;
+    transition: background-color 0.3s ease, background-image 0.3s ease,
+        opacity 0.5s ease; /* Tambahkan transisi opacity */
+    opacity: 1; /* Atur opacity awal */
 }
 
-/* Logo with margin */
-.navbar-brand {
-    margin-left: 50px;
+/* Kelas navbar saat discroll */
+.navbar-scrolled {
+    background-color: rgb(
+        219,
+        219,
+        219
+    ) !important; /* Background warna putih saat scroll */
+    background-image: none; /* Hapus background gradient saat scroll */
+    transition: background-color 0.3s ease, background-image 0.3s ease,
+        opacity 0.5s ease; /* Transisi dengan fade */
+    opacity: 0.9; /* Set opacity lebih rendah untuk efek fade-in */
 }
 
-/* Navbar links */
+.navbar-scrolled a {
+    color: #000 !important; /* Warna link berubah saat scroll */
+}
+
+.navbar-scrolled a:hover::after {
+    background-color: #000 !important; /* Garis bawah berubah menjadi hitam saat hover */
+}
+
+/* Link default */
 .navbar a {
     color: #ffffff;
     margin: 0px 20px;
     position: relative;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
-/* Hover effect for menu links */
+/* Hover effect untuk link */
 .navbar a:hover {
     color: #91ceff;
 }
@@ -42,55 +61,39 @@
     transition: width 0.5s ease-in-out;
 }
 
-/* Show white line under menu item on hover */
+/* Garis bawah saat hover */
 .navbar a:hover::after {
-    width: 100%; /* Make the line as wide as the text */
+    width: 100%;
 }
 
-/* Navbar brand image */
+/* Logo size */
 .navbar-brand img {
-    width: 100px; /* Default logo size */
+    width: 100px;
 }
 
 .navbar-nav {
     margin-right: 50px;
 }
 
-/* Responsive design for screen widths 768px and below */
+/* Responsivitas */
 @media (max-width: 768px) {
     .navbar-brand {
-        margin-left: 20px; /* Adjust logo margin for smaller screens */
+        margin-left: 20px;
     }
 }
 
-/* Responsive design for screen widths 420px and below */
-@media (max-width: 576px) {
-    .navbar {
-        padding: 10px;
-    }
-
-    .navbar-nav {
-        flex-direction: column; /* Stack menu items vertically */
-    }
-
-    .navbar-brand img {
-        width: 70px !important; /* Make logo smaller */
-    }
-}
-
-/* Responsive design for screen widths 576px and below */
 @media (max-width: 576px) {
     .navbar {
         padding: 10px;
     }
 
     .navbar-brand img {
-        width: 70px !important; /* Make logo smaller */
+        width: 70px !important;
         transform: translateX(-60px);
     }
 
     .navbar-nav {
-        flex-direction: column; /* Stack menu items vertically */
+        flex-direction: column;
     }
 
     .navbar-toggler-icon {
