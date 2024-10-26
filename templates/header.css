@@ -1,0 +1,114 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent; /* Tidak ada background */
+    font-weight: bold;
+    transition: background-color 0.3s ease, background-image 0.3s ease,
+        opacity 0.5s ease; /* Tambahkan transisi opacity */
+    opacity: 1; /* Atur opacity awal */
+}
+
+/* Kelas navbar saat discroll */
+.navbar-scrolled {
+    background-image: linear-gradient(
+        90deg,
+        rgba(65, 98, 189, 1) 0%,
+        rgba(0, 19, 71, 1) 100%
+    ) !important;
+    background-image: none; /* Hapus background gradient saat scroll */
+    transition: background-color 0.3s ease, background-image 0.3s ease,
+        opacity 0.5s ease; /* Transisi dengan fade */
+    opacity: 0.9; /* Set opacity lebih rendah untuk efek fade-in */
+}
+
+.navbar-scrolled a {
+    color: #ffffff !important;
+}
+
+.navbar-scrolled a:hover::after {
+    background-color: #ffffff !important;
+}
+
+/* Link default */
+.navbar a {
+    color: #ffffff !important;
+    margin: 0px 20px;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect untuk link */
+.navbar a:hover {
+    color: #b6b6b6 !important;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Garis bawah saat hover */
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* Logo size */
+.navbar-brand img {
+    width: 80px !important;
+}
+
+.navbar-nav {
+    margin-right: 50px;
+}
+
+/* Responsivitas */
+@media (max-width: 991px) {
+    .navbar {
+        background-image: linear-gradient(
+            90deg,
+            rgba(65, 98, 189, 1) 0%,
+            rgba(0, 19, 71, 1) 100%
+        ) !important;
+    }
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .navbar-brand {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 10px;
+        background-image: linear-gradient(
+            90deg,
+            rgba(65, 98, 189, 1) 0%,
+            rgba(0, 19, 71, 1) 100%
+        ) !important;
+    }
+
+    .navbar-brand img {
+        width: 50px !important;
+        transform: translateX(-60px);
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .navbar-toggler-icon {
+        width: 20px !important;
+    }
+}

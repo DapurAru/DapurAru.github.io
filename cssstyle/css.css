@@ -1,0 +1,969 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#whatsapp-link {
+    position: fixed;
+    bottom: 20px; /* Jarak dari bawah */
+    right: 20px; /* Jarak dari kanan */
+    z-index: 1000; /* Agar tetap di atas elemen lain */
+}
+
+#whatsapp-logo {
+    width: 50px;
+    height: 50px;
+    transition: width 0.3s, height 0.3s; /* Animasi agar smooth saat berubah ukuran */
+}
+
+/* Media queries untuk ukuran layar lebih kecil */
+@media (max-width: 768px) {
+    #whatsapp-logo {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    #whatsapp-logo {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/*slider*/
+.custom-carousel-height {
+    height: 950px;
+    object-fit: cover;
+}
+
+.overlay-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%; /* Perpanjang lebar overlay sesuai kebutuhan */
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0)
+    ); /* Hitam pudar ke transparan */
+    z-index: 1; /* Pastikan overlay berada di atas gambar */
+}
+
+.carousel-item {
+    position: relative; /* Memastikan item carousel memiliki posisi relatif */
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.backroundd::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Setengah dari tinggi item */
+    z-index: 1; /* Menempatkan overlay di atas gambar */
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+    display: block;
+    opacity: 1;
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.carousel-item.active {
+    transform: scale(1);
+}
+
+.carousel-fade .carousel-item {
+    transition: opacity 1s ease;
+}
+
+.overlay-content {
+    position: relative; /* Memastikan konten overlay berada di atas overlay */
+    z-index: 2; /* Menempatkan konten di atas overlay hitam */
+    margin-left: 200px;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .overlay-content {
+        margin-left: 50px; /* Mengurangi margin untuk layar kecil */
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .overlay-content h4 {
+        font-size: 1.4rem; /* Ukuran font untuk judul overlay */
+    }
+
+    .overlay-content p {
+        font-size: 0.6rem; /* Ukuran font untuk teks overlay */
+    }
+
+    .overlay-content .btn {
+        font-size: 0.75rem; /* Ukuran font untuk tombol */
+        padding: 0.5rem 1rem; /* Mengurangi padding tombol */
+    }
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 576px) {
+    .overlay-content {
+        margin-left: 10px; /* Mengurangi margin untuk layar kecil */
+        margin-right: 10px; /* Menambahkan margin kanan untuk keseimbangan */
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .overlay-content h4 {
+        font-size: 1rem; /* Ukuran font untuk judul overlay */
+    }
+
+    .overlay-content p {
+        font-size: 0.5rem; /* Ukuran font untuk teks overlay */
+    }
+
+    .overlay-content .btn {
+        font-size: 0.7rem !important; /* Ukuran font untuk tombol */
+        width: 100px;
+        height: 30px;
+    }
+
+    .carousel-control-prev {
+        width: 20px !important;
+    }
+
+    .carousel-control-next {
+        width: 20px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-carousel-height {
+        height: 600px; /* Atur tinggi gambar untuk layar kecil */
+        object-fit: cover; /* Memastikan gambar tetap terpotong dengan baik */
+    }
+
+    .carousel-caption {
+        position: absolute;
+        bottom: 10%; /* Atur posisi caption */
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.25rem; /* Ukuran font untuk judul caption */
+    }
+
+    .carousel-caption p {
+        font-size: 0.875rem; /* Ukuran font untuk teks caption */
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-carousel-height {
+        height: 500px; /* Atur tinggi gambar untuk layar kecil */
+        object-fit: cover; /* Memastikan gambar tetap terpotong dengan baik */
+    }
+
+    .carousel-caption {
+        position: absolute;
+        bottom: 10%; /* Atur posisi caption */
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.25rem; /* Ukuran font untuk judul caption */
+    }
+
+    .carousel-caption p {
+        font-size: 0.875rem; /* Ukuran font untuk teks caption */
+    }
+}
+/*slider*/
+
+/*About home*/
+/* About Us Section */
+.textabout {
+    text-align: center;
+}
+
+.about-section {
+    /* background-image: linear-gradient(
+        90deg,
+        rgba(65, 98, 189, 1) 0%,
+        rgb(0, 45, 168) 100%
+    ); */
+    background-color: rgb(37, 66, 146);
+    padding: 5rem 0;
+    border-radius: 64px 65px 0px 0px;
+    -webkit-border-radius: 64px 65px 0px 0px;
+    -moz-border-radius: 64px 65px 0px 0px;
+}
+
+.about-section h3 {
+    font-size: 4rem;
+    color: #333;
+}
+
+.about-section p {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.8;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.about-section img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.about-section img:hover {
+    transform: scale(1.05);
+}
+
+.about-section .fade-in {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Saat elemen muncul di viewport */
+.about-section .fade-in.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 576px) {
+    .aboutfoto img {
+        width: 100%;
+        height: 400px;
+    }
+}
+/*About Home*/
+
+/*Moto Home*/
+.motohome {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* Fade-in Animation from Left */
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.motohome h2 {
+    color: #4a4a4a; /* Adjust header color */
+}
+
+.motohome p {
+    color: #6c757d; /* Adjust paragraph color */
+}
+/*Moto Home*/
+
+/*Our Produk*/
+
+.cardseluruh {
+    border-top: 5px double rgba(65, 98, 189, 1);
+    border-right: 5px solid rgba(65, 98, 189, 1);
+    border-bottom: 5px solid rgba(65, 98, 189, 1);
+    border-left: 5px solid rgba(65, 98, 189, 1);
+    border-radius: 15px;
+}
+
+.cardseluruh:hover {
+    border-radius: 1px;
+}
+
+.produk {
+    margin-bottom: 250px;
+}
+.custom-img {
+    height: 500px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+}
+
+.img-container {
+    position: relative;
+}
+
+.hover-text {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 8px;
+    width: 90%;
+    text-align: center;
+    color: aliceblue;
+}
+
+.img-container:hover .hover-text {
+    display: block;
+}
+
+.card-img-top {
+    transition: transform 0.3s ease;
+    border-radius: 50px;
+}
+
+.img-container:hover .card-img-top {
+    transform: scale(1);
+    filter: brightness(0.8) sepia(0.5) hue-rotate(10deg); /* Efek warna */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.product-card {
+    transition: transform 0.3s, box-shadow 0.9s; /* Transisi untuk efek hover */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Memperbesar kartu saat hover */
+    box-shadow: 0 8px 16px rgba(75, 4, 4, 0.2); /* Efek bayangan lebih dalam saat hover */
+}
+
+.img-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Setengah dari tinggi gambar */
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0)
+    ); /* Warna hitam memudar ke transparan */
+    z-index: 1; /* Agar berada di atas gambar */
+    transition: opacity 0.3s ease; /* Transisi untuk smooth efek */
+    opacity: 0; /* Awalnya tidak terlihat */
+}
+
+.img-container:hover::after {
+    opacity: 1; /* Tampilkan efek hitam saat hover */
+}
+
+/*android*/
+/* Menjaga 2 kolom saat layar kecil */
+@media (max-width: 800px) {
+    .col-sm-6 {
+        flex: 0 0 50%; /* Memastikan 2 kolom */
+        max-width: 50%;
+    }
+}
+/* Default untuk layar besar */
+.card-text {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+}
+
+h3 {
+    font-size: 20px !important;
+}
+
+/* Untuk layar kecil (tablet atau mobile) */
+@media (max-width: 768px) {
+    .card-text {
+        font-size: 0.9rem;
+        margin-top: 0.4rem;
+        line-height: 1.4;
+    }
+
+    .custom-img {
+        height: 400px !important;
+    }
+
+    .img-container:hover .card-img-top {
+        transform: scale(
+            1.02
+        ); /* Memperbesar gambar sedikit pada layar kecil */
+        filter: brightness(0.9) sepia(0.3) hue-rotate(5deg); /* Efek warna lebih ringan pada layar kecil */
+    }
+
+    h3 {
+        font-size: 18px !important;
+    }
+
+    .btn {
+        height: 35px;
+        width: 120px;
+        font-size: 14px !important;
+    }
+}
+
+/* Untuk layar yang sangat kecil (mobile) */
+@media (max-width: 576px) {
+    .card-text {
+        font-size: 0rem;
+        line-height: 1.3;
+    }
+
+    .custom-img {
+        height: 200px !important;
+    }
+
+    .img-container:hover .card-img-top {
+        transform: scale(
+            1.01
+        ); /* Memperbesar gambar sedikit pada layar sangat kecil */
+        filter: brightness(1) sepia(0.1) hue-rotate(0deg); /* Efek warna lebih ringan pada layar sangat kecil */
+    }
+
+    h3 {
+        font-size: 14px !important;
+    }
+}
+/*android*/
+
+/*Pop Up*/
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1030;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: justify;
+    max-width: 500px;
+    animation: slide-in 0.5s forwards;
+    margin-top: 50px;
+}
+
+.popup-image {
+    width: 100%;
+    height: 400px !important;
+    border-radius: 10px;
+}
+
+/* Untuk layar kecil (tablet atau mobile) */
+@media (max-width: 768px) {
+    .popup-image {
+        height: 450px !important;
+    }
+    .popup-description {
+        font-size: 14px !important;
+    }
+}
+
+/* Untuk layar yang sangat kecil (mobile) */
+@media (max-width: 576px) {
+    .popup-image {
+        height: 350px !important;
+    }
+    .popup-description {
+        font-size: 12px !important;
+    }
+}
+
+.popup-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.popup-description {
+    font-size: 1rem;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.btnpop {
+    background-color: rgb(47, 47, 214);
+    width: 180px;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+.btnpop a {
+    text-decoration: none;
+    color: white;
+}
+
+.btnpop:hover {
+    background-color: rgb(0, 0, 161);
+}
+
+.btnpop a:hover {
+    color: rgb(212, 212, 212);
+}
+
+/* Untuk layar kecil (tablet atau mobile) */
+@media (max-width: 768px) {
+    .btnpop {
+        font-size: 12px !important; /* Ukuran font untuk layar kecil */
+    }
+}
+
+/* Untuk layar yang sangat kecil (mobile) */
+@media (max-width: 576px) {
+    .btnpop {
+        font-size: 10px !important; /* Ukuran font untuk layar sangat kecil */
+    }
+}
+/*Pop Up*/
+/*Our produk*/
+
+/*Mitra home*/
+.mitrahome {
+    margin-bottom: 250px;
+}
+
+.mitrahome img {
+    width: 200px;
+    height: 200px;
+}
+
+.small-logo {
+    max-width: 80%; /* Atur lebar maksimum logo */
+    height: auto; /* Menjaga proporsi gambar */
+}
+
+/* Responsivitas untuk layar kecil */
+@media (max-width: 576px) {
+    .small-logo {
+        max-width: 60%; /* Atur lebar maksimum untuk layar kecil */
+    }
+
+    .col-6 {
+        flex: 0 0 50%; /* Setengah kolom pada layar kecil */
+        max-width: 50%;
+    }
+
+    .col-sm-3 {
+        flex: 0 0 25%; /* Satu perempat kolom pada layar besar */
+        max-width: 25%;
+    }
+}
+/*Mira Home*/
+
+/* Hover hanya pada gambar */
+.product-card img {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Contact*/
+
+.image-container {
+    position: relative;
+    width: 100%; /* Sesuaikan lebar sesuai kebutuhan */
+    margin: 0 auto; /* Pusatkan kontainer */
+    margin-bottom: 150px;
+}
+
+.image-container img {
+    width: 100%; /* Gambar menyesuaikan lebar kontainer */
+    height: 900px; /* Tinggi gambar */
+    display: block; /* Menghindari spasi bawah pada gambar */
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Sesuaikan lebar dengan gambar */
+    height: 100%; /* Sesuaikan tinggi dengan gambar */
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.7
+    ); /* Latar belakang hitam dengan transparansi */
+    z-index: 1; /* Pastikan berada di belakang teks */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px; /* Ukuran font 70px */
+    color: white; /* Warna teks */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efek bayangan teks */
+    text-align: center; /* Pusatkan teks */
+    z-index: 2; /* Pastikan teks berada di depan latar belakang */
+    font-weight: bolder;
+}
+
+/* Media query untuk layar 400px ke bawah */
+@media (max-width: 768px) {
+    .overlay-text {
+        font-size: 50px; /* Ubah ukuran font untuk responsivitas */
+    }
+}
+
+/* Media query untuk layar 400px ke bawah */
+@media (max-width: 576px) {
+    .image-container img {
+        height: 400px; /* Ubah tinggi gambar */
+    }
+
+    .overlay-text {
+        font-size: 30px; /* Ubah ukuran font untuk responsivitas */
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Membuat card memiliki tinggi penuh */
+}
+
+.card img {
+    max-width: 100%; /* Mengatur gambar agar responsif */
+    height: auto;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Contact*/
+
+/* About Us */
+
+.produksi {
+    display: flex;
+    align-items: center;
+    padding: 0px 100px;
+    margin: 40px 0px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in-left {
+    transform: translateX(-50px);
+}
+
+.fade-in-right {
+    transform: translateX(50px);
+}
+
+.fade-in-left.show,
+.fade-in-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.produksi-img {
+    max-width: 100%;
+    height: auto;
+    width: 600px;
+    margin-right: 20px;
+}
+
+.aboutus {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 400;
+    padding: 0px 30px;
+}
+
+/* Responsivitas untuk layar di bawah 762px */
+@media (max-width: 762px) {
+    .produksi {
+        padding: 0px 20px;
+    }
+
+    .produksi-img {
+        width: 50%;
+        max-width: 300px;
+    }
+
+    .produksikel {
+        width: 50%;
+        padding-left: 20px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
+
+/* Tetap dua kolom hingga 400px */
+@media (max-width: 400px) {
+    .produksi {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 10px;
+    }
+
+    .produksi-img {
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+
+    .produksikel {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+/* Animasi fade-in */
+/* Fade-in Left Effect */
+.fade-in-left {
+    opacity: 0; /* Mulai dengan transparansi 0 */
+    transform: translateX(-50px); /* Geser ke kiri */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transisi untuk opacity dan transform */
+}
+
+/* Ketika elemen mendapatkan kelas .show, animasi dijalankan */
+.fade-in-left.show {
+    opacity: 1; /* Ubah transparansi menjadi 1 */
+    transform: translateX(0); /* Kembali ke posisi normal */
+}
+
+.fade-in-right {
+    opacity: 0; /* Mulai dengan transparansi 0 */
+    transform: translateX(50px); /* Geser ke kiri */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transisi untuk opacity dan transform */
+}
+
+.fade-in-left.show {
+    opacity: 1; /* Ubah transparansi menjadi 1 */
+    transform: translateX(0); /* Kembali ke posisi normal */
+}
+
+.sosial-container {
+    position: relative;
+    width: 100%; /* Sesuaikan lebar sesuai kebutuhan */
+    margin: 0 auto; /* Pusatkan kontainer */
+    margin-bottom: 150px;
+}
+
+.sosial-container img {
+    width: 100%; /* Gambar menyesuaikan lebar kontainer */
+    height: 1000px; /* Tinggi gambar */
+    display: block; /* Menghindari spasi bawah pada gambar */
+}
+
+.sosial-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Sesuaikan lebar dengan gambar */
+    height: 100%; /* Sesuaikan tinggi dengan gambar */
+    background-color: rgba(
+        41,
+        41,
+        41,
+        0.7
+    ); /* Latar belakang hitam dengan transparansi */
+    z-index: 1; /* Pastikan berada di belakang teks */
+}
+
+.sosial-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -300%);
+    font-size: 70px; /* Ukuran font 70px */
+    color: white; /* Warna teks */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efek bayangan teks */
+    text-align: center; /* Pusatkan teks */
+    z-index: 2; /* Pastikan teks berada di depan latar belakang */
+    font-weight: bolder;
+}
+
+.sosial-textp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-size: 20px; /* Ukuran font 70px */
+    color: white; /* Warna teks */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efek bayangan teks */
+    text-align: center; /* Pusatkan teks */
+    z-index: 2; /* Pastikan teks berada di depan latar belakang */
+    font-weight: bolder;
+    width: 100%;
+    padding: 0px 150px;
+}
+
+.sosial-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center; /* Pusatkan teks */
+    z-index: 2; /* Pastikan teks berada di depan latar belakang */
+    width: 100%;
+}
+
+.sosialbut1 {
+    text-align: center;
+    background-color: transparent; /* Tidak ada background */
+    border: 2px solid #ffffff;
+    padding: 10px 30px;
+}
+
+.sosialbut1:hover {
+    border: 2px solid #9b9b9b;
+}
+
+.sosialbut1 a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.sosialbut1 a:hover {
+    text-decoration: none;
+    color: #9b9b9b;
+}
+
+/* Untuk layar kecil (tablet atau mobile) */
+@media (max-width: 1541px) {
+    .sosial-text {
+        transform: translate(-50%, -400%);
+        font-size: 50px; /* Ubah ukuran font untuk responsivitas */
+    }
+
+    .sosial-textp {
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        padding: 0px 20px;
+    }
+
+    .sosial-button {
+        transform: translate(-50%, 400%);
+    }
+
+    .sosialbut1 {
+        font-size: 15px;
+    }
+
+    .sosial-container img {
+        height: 800px;
+    }
+}
+
+/* Untuk layar kecil (tablet atau mobile) */
+@media (max-width: 768px) {
+    .sosial-text {
+        transform: translate(-50%, -690%);
+        font-size: 30px; /* Ubah ukuran font untuk responsivitas */
+    }
+
+    .sosial-textp {
+        transform: translate(-50%, -60%);
+        font-size: 20px;
+        padding: 0px 20px;
+    }
+
+    .sosial-button {
+        transform: translate(-50%, 500%);
+    }
+
+    .sosialbut1 {
+        font-size: 10px;
+    }
+
+    .sosial-container img {
+        height: 800px;
+    }
+}
+
+/* Media query untuk layar 400px ke bawah */
+@media (max-width: 576px) {
+    .image-container img {
+        height: 400px; /* Ubah tinggi gambar */
+    }
+
+    .sosial-text {
+        transform: translate(-50%, -590%);
+        font-size: 30px; /* Ubah ukuran font untuk responsivitas */
+    }
+
+    .sosial-textp {
+        transform: translate(-50%, -70%);
+        font-size: 20px;
+        padding: 0px 20px;
+    }
+
+    .sosial-button {
+        transform: translate(-50%, 270%);
+    }
+
+    .sosialbut1 {
+        font-size: 10px;
+    }
+
+    .sosial-container img {
+        height: 600px;
+    }
+}
+
+.nohpcontact {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+/* About Us*/

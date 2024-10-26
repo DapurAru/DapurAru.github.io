@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Navbar Example</title>
+        <link rel="stylesheet" href="templates/header.css" />
+        <link rel="stylesheet" href="templates/footer.css" />
+        <link rel="stylesheet" href="cssstyle/css.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+    </head>
+    <body class="bg-gray-100">
+        <!-- Header -->
+        <div id="header"></div>
+        <!-- Header -->
+
+        <!--Contact img-->
+        <div class="image-container">
+            <img src="img/imgback2.jpg" alt="" />
+            <div class="background-overlay"></div>
+            <!-- Latar belakang hitam -->
+            <div class="overlay-text">CONTACT US</div>
+        </div>
+        <!--Contact img-->
+
+        <!-- Contact -->
+        <div class="container mx-auto p-5 fade-in-right">
+            <h1 id="contact-title" class="text-3xl font-bold mb-5 text-center">
+                Contact Us
+            </h1>
+            <div class="row comtact">
+                <div id="contact-card-1" class="col-md-6 mb-4">
+                    <div
+                        class="card bg-white shadow-lg p-4 rounded-lg hover:shadow-xl transition-shadow duration-300"
+                    >
+                        <h2
+                            class="card-title text-xl font-semibold text-primary"
+                        >
+                            SAHABAT TANI
+                        </h2>
+                        <h3 class="text-md font-semibold mt-3">
+                            OPENING HOURS
+                        </h3>
+                        <p>Monday to Friday: 8am - 5pm</p>
+                        <h3 class="text-md font-semibold mt-3">E-MAIL</h3>
+                        <p class="text-blue-600">sahabattani@gmail.com</p>
+                        <h3 class="text-md font-semibold mt-3">PHONE</h3>
+                        <a
+                            class="nohpcontact"
+                            href="https://wa.me/6282285402459"
+                            >+62 812-8359-8638</a
+                        >
+                        <a
+                            class="nohpcontact"
+                            href="https://wa.me/6282285402459"
+                            >+62 812-8359-8638</a
+                        >
+                    </div>
+                </div>
+
+                <div id="contact-card-2" class="col-md-6 mb-4">
+                    <div
+                        class="card bg-white shadow-lg p-4 rounded-lg hover:shadow-xl transition-shadow duration-300"
+                    >
+                        <h2
+                            class="card-title text-xl font-semibold text-primary"
+                        >
+                            What Can We Do For You?
+                        </h2>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label"
+                                    >Your name</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control border border-gray-300 rounded-md p-2"
+                                    id="name"
+                                    placeholder="Your name"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label"
+                                    >Your email</label
+                                >
+                                <input
+                                    type="email"
+                                    class="form-control border border-gray-300 rounded-md p-2"
+                                    id="email"
+                                    placeholder="Your email"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label"
+                                    >Subject</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control border border-gray-300 rounded-md p-2"
+                                    id="subject"
+                                    placeholder="Subject"
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label"
+                                    >Your message (optional)</label
+                                >
+                                <textarea
+                                    class="form-control border border-gray-300 rounded-md p-2"
+                                    id="message"
+                                    rows="4"
+                                    placeholder="Your message"
+                                ></textarea>
+                            </div>
+                            <button
+                                type="submit"
+                                class="btn btn-primary w-full"
+                            >
+                                SUBMIT
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Maps -->
+        <div class="container mx-auto py-5 fade-in-left">
+            <div class="row bg-gray-100 shadow-md p-4 rounded-lg">
+                <div id="maps-info" class="col-md-6">
+                    <h2 class="text-2xl font-bold mb-4">SAHABAT TANI</h2>
+                    <p class="text-gray-600 mb-4">
+                        Perusahaan ekspor-impor yang berlokasi di bogor
+                    </p>
+                    <div class="bg-white p-3 rounded shadow">
+                        <h3 class="h6 font-semibold">Alamat</h3>
+                        <p>
+                            Jl. Raya Bogor-Parung, Pd. Udik, Kec. Kemang,
+                            Kabupaten Bogor, Jawa Barat 16310
+                        </p>
+                    </div>
+                    <button class="btn btn-primary mt-3">Click Here</button>
+                </div>
+                <div id="maps-iframe" class="col-md-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.283435233566!2d106.73363827587106!3d-6.485745763413335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c2b891c06d51%3A0x9334fc5c42bf11dc!2sJl.%20Raya%20Bogor-Parung%2C%20Kec.%20Kemang%2C%20Kabupaten%20Bogor%2C%20Jawa%20Barat%2016310!5e0!3m2!1sid!2sid!4v1729226057382!5m2!1sid!2sid"
+                        width="100%"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen
+                        loading="lazy"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+        <!-- Footer -->
+
+        <a
+            href="https://wa.me/6282285402459"
+            target="_blank"
+            id="whatsapp-link"
+        >
+            <img src="img/whatsapp.png" alt="WhatsApp" id="whatsapp-logo" />
+        </a>
+
+        <!-- Script -->
+
+        <script>
+            // Fetch dan masukkan konten header ke dalam #header
+            fetch('templates/header.html')
+                .then((response) => response.text())
+                .then(
+                    (data) =>
+                        (document.getElementById('header').innerHTML = data)
+                )
+                .catch((error) => console.error('Gagal memuat header:', error));
+
+            // Memuat footer menggunakan Fetch API
+            fetch('templates/footer.html')
+                .then((response) => response.text())
+                .then(
+                    (data) =>
+                        (document.getElementById('footer').innerHTML = data)
+                )
+                .catch((error) => console.error('Gagal memuat footer:', error));
+        </script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="jsscript/efekscroll.js"></script>
+        <script src="jsscript/popup.js"></script>
+        <!-- Script -->
+    </body>
+</html>
