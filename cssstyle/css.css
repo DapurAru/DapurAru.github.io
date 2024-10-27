@@ -217,7 +217,7 @@ body {
 }
 
 .about-section p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #ffffff;
     line-height: 1.8;
     font-weight: 500;
@@ -569,15 +569,17 @@ h3 {
 .btnpop {
     background-color: rgb(47, 47, 214);
     width: 180px;
-    padding: 12px;
+    padding: 10px;
     border-radius: 10px;
     text-align: center;
     margin: auto;
+    height: auto;
 }
 
 .btnpop a {
     text-decoration: none;
     color: white;
+    font-size: 13px;
 }
 
 .btnpop:hover {
@@ -992,8 +994,8 @@ h3 {
     }
 
     .sosial-text {
-        transform: translate(-50%, -590%);
-        font-size: 30px; /* Ubah ukuran font untuk responsivitas */
+        transform: translate(-50%, -600%);
+        font-size: 27px; /* Ubah ukuran font untuk responsivitas */
     }
 
     .sosial-textp {
