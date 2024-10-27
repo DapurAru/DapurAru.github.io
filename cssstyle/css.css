@@ -419,8 +419,9 @@ h3 {
 /* Untuk layar yang sangat kecil (mobile) */
 @media (max-width: 576px) {
     .card-text {
-        font-size: 0rem;
+        font-size: 0.6rem;
         line-height: 1.3;
+        transform: translateY(-100%);
     }
 
     .custom-img {
@@ -436,6 +437,32 @@ h3 {
 
     h3 {
         font-size: 14px !important;
+    }
+}
+
+@media (max-width: 399px) {
+    .col-sm-6 {
+        flex: 0 0 50% !important; /* Memastikan 2 kolom */
+        max-width: 48% !important;
+        margin: auto;
+    }
+
+    .custom-img {
+        height: 150px !important; /* Sesuaikan tinggi gambar pada layar kecil */
+    }
+
+    .card-text {
+        font-size: 0.5rem;
+    }
+
+    h3 {
+        font-size: 12px !important;
+    }
+
+    .btn {
+        height: 30px;
+        width: 100px;
+        font-size: 12px !important;
     }
 }
 /*android*/
@@ -472,6 +499,28 @@ h3 {
     border-radius: 10px;
 }
 
+.popup-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.popup-description {
+    font-size: 0.8rem;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
 /* Untuk layar kecil (tablet atau mobile) */
 @media (max-width: 768px) {
     .popup-image {
@@ -492,26 +541,19 @@ h3 {
     }
 }
 
-.popup-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 10px 0;
-}
+/* Untuk layar yang sangat kecil (mobile) */
+@media (max-width: 399px) {
+    .popup-content {
+        height: 500px !important;
+        transform: translateY(-5%) !important;
+    }
 
-.popup-description {
-    font-size: 1rem;
-}
-
-.close {
-    cursor: pointer;
-    font-size: 1.5rem;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-}
-
-.hidden {
-    display: none;
+    .popup-image {
+        height: 13rem !important;
+    }
+    .popup-description {
+        font-size: 9px !important;
+    }
 }
 
 @keyframes slide-in {
@@ -557,6 +599,18 @@ h3 {
 @media (max-width: 576px) {
     .btnpop {
         font-size: 10px !important; /* Ukuran font untuk layar sangat kecil */
+    }
+}
+
+/* Untuk layar yang sangat kecil (mobile) */
+@media (max-width: 399px) {
+    .btnpop {
+        width: 100px;
+        height: 40px;
+    }
+
+    .btnpop a {
+        font-size: 8px;
     }
 }
 /*Pop Up*/
