@@ -194,6 +194,19 @@ body {
 
 /*About home*/
 /* About Us Section */
+
+.btnabout {
+    background-color: rgb(47, 47, 214);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.btnabout a {
+    color: white;
+    text-decoration: none;
+}
+
 .textabout {
     text-align: center;
 }
