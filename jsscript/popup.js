@@ -24,8 +24,8 @@ function openPopup(title, image, description) {
     document.getElementById('popup-description').innerText = description;
 
     // Full URL of the image for WhatsApp
-    const fullImageUrl = `https://dapuraru.github.io/${image}`;
-    const whatsappNumber = '6282285402459'; // WhatsApp number
+    const fullImageUrl = `https://sahabattani.com//${image}`;
+    const whatsappNumber = '6281318553234'; // WhatsApp number
     const whatsappMessage = `Hai, saya tertarik dengan produk ini yaitu ${title}. Berikut gambar produknya: ${fullImageUrl}`;
 
     // Set WhatsApp link with encoded URL and message

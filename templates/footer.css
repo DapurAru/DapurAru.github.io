@@ -51,3 +51,13 @@
         width: 100px; /* Ukuran logo lebih kecil */
     }
 }
+
+h5 {
+    position: relative;
+    padding-bottom: 10px; /* Menambahkan jarak di bawah teks */
+}
+
+.col-md-3 h5 {
+    border-bottom: 2px solid white; /* Garis bawah putih */
+    display: inline-block; /* Membatasi lebar garis sesuai panjang teks */
+}

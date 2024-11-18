@@ -32,6 +32,10 @@ body {
 }
 
 /*slider*/
+.carousel {
+    width: 100%;
+}
+
 .custom-carousel-height {
     height: 950px;
     object-fit: cover;
@@ -510,6 +514,7 @@ h3 {
     width: 100%;
     height: 400px !important;
     border-radius: 10px;
+    padding-top: 20px;
 }
 
 .popup-title {
@@ -545,27 +550,27 @@ h3 {
 }
 
 /* Untuk layar yang sangat kecil (mobile) */
-@media (max-width: 576px) {
+@media (max-width: 456px) {
     .popup-image {
-        height: 350px !important;
+        height: 450px !important;
     }
     .popup-description {
-        font-size: 12px !important;
+        font-size: 15px !important;
     }
 }
 
 /* Untuk layar yang sangat kecil (mobile) */
-@media (max-width: 399px) {
+@media (max-width: 350px) {
     .popup-content {
-        height: 500px !important;
+        height: 600px !important;
         transform: translateY(-5%) !important;
     }
 
     .popup-image {
-        height: 13rem !important;
+        height: 15rem !important;
     }
     .popup-description {
-        font-size: 9px !important;
+        font-size: 13px !important;
     }
 }
 
@@ -592,7 +597,7 @@ h3 {
 .btnpop a {
     text-decoration: none;
     color: white;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .btnpop:hover {
@@ -606,7 +611,7 @@ h3 {
 /* Untuk layar kecil (tablet atau mobile) */
 @media (max-width: 768px) {
     .btnpop {
-        font-size: 12px !important; /* Ukuran font untuk layar kecil */
+        font-size: 14px !important; /* Ukuran font untuk layar kecil */
     }
 }
 
@@ -620,15 +625,16 @@ h3 {
 /* Untuk layar yang sangat kecil (mobile) */
 @media (max-width: 399px) {
     .btnpop {
-        width: 100px;
+        width: 130px;
         height: 40px;
     }
 
     .btnpop a {
-        font-size: 8px;
+        font-size: 12px;
     }
 }
 /*Pop Up*/
+
 /*Our produk*/
 
 /*Mitra home*/
@@ -949,6 +955,32 @@ h3 {
 }
 
 /* Untuk layar kecil (tablet atau mobile) */
+@media (max-width: 1920px) {
+    .sosial-text {
+        transform: translate(-50%, -400%);
+        font-size: 50px; /* Ubah ukuran font untuk responsivitas */
+    }
+
+    .sosial-textp {
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        padding: 0px 20px;
+    }
+
+    .sosial-button {
+        transform: translate(-50%, 400%);
+    }
+
+    .sosialbut1 {
+        font-size: 15px;
+    }
+
+    .sosial-container img {
+        height: 800px;
+    }
+}
+
+/* Untuk layar kecil (tablet atau mobile) */
 @media (max-width: 1541px) {
     .sosial-text {
         transform: translate(-50%, -400%);
@@ -977,13 +1009,13 @@ h3 {
 /* Untuk layar kecil (tablet atau mobile) */
 @media (max-width: 768px) {
     .sosial-text {
-        transform: translate(-50%, -690%);
+        transform: translate(-50%, -700%);
         font-size: 30px; /* Ubah ukuran font untuk responsivitas */
     }
 
     .sosial-textp {
         transform: translate(-50%, -60%);
-        font-size: 20px;
+        font-size: 15px;
         padding: 0px 20px;
     }
 
@@ -1003,7 +1035,7 @@ h3 {
 /* Media query untuk layar 400px ke bawah */
 @media (max-width: 576px) {
     .image-container img {
-        height: 400px; /* Ubah tinggi gambar */
+        height: 600px; /* Ubah tinggi gambar */
     }
 
     .sosial-text {
@@ -1012,13 +1044,13 @@ h3 {
     }
 
     .sosial-textp {
-        transform: translate(-50%, -70%);
-        font-size: 20px;
+        transform: translate(-50%, -50%);
+        font-size: 12px;
         padding: 0px 20px;
     }
 
     .sosial-button {
-        transform: translate(-50%, 270%);
+        transform: translate(-50%, 390%);
     }
 
     .sosialbut1 {
@@ -1027,6 +1059,30 @@ h3 {
 
     .sosial-container img {
         height: 600px;
+    }
+}
+
+/* Media query untuk layar 400px ke bawah */
+@media (max-width: 410px) {
+    .image-container img {
+        height: 600px; /* Ubah tinggi gambar */
+    }
+
+    .sosial-text {
+        transform: translate(-50%, -600%);
+        font-size: 22px; /* Ubah ukuran font untuk responsivitas */
+    }
+}
+
+/* Media query untuk layar 400px ke bawah */
+@media (max-width: 366px) {
+    .image-container img {
+        height: 600px; /* Ubah tinggi gambar */
+    }
+
+    .sosial-text {
+        transform: translate(-50%, -650%);
+        font-size: 22px; /* Ubah ukuran font untuk responsivitas */
     }
 }
 
